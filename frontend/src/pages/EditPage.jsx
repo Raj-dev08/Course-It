@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useCourseStore } from "../store/useCourse"
-import CourseHandler from "../components/courseHandler"
+import CourseHandler from "../components/CourseHandler"
 
 const EditPage = () => {
     const {updatingCourse,isCreatingCourse,updateCourse}=useCourseStore();
