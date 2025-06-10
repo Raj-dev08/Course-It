@@ -1,4 +1,5 @@
 import {Loader2} from "lucide-react";
+import toast from "react-hot-toast";
 
 const CourseHandler = ({ courseData, setCourseData, createCourse, isCreatingCourse ,mode}) => {
     const handleSubmit = (e) => {
