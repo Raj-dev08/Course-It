@@ -8,5 +8,10 @@ pipeline {
                 echo 'how are you fellas ?'
             }
         }
+        stage('Install'){
+            steps {
+                echo 'npm run dev'
+            }
+        }
     }
 }
