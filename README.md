@@ -87,7 +87,7 @@ cd Course-It
 -STREAM_API_SECRET=your_stream_secret
 
 # frontend/.env
--VITE_STREAM_KEY=your_stream_key
+- VITE_STREAM_KEY=your_stream_key
 
 ### 3. Run locally 
 
@@ -103,8 +103,8 @@ npm install
 npm run dev
 ```
 ### Demo
--render link:
--https://course-it-2s22.onrender.com
+- render link:
+- https://course-it-2s22.onrender.com
 
 # demo credentials for accessing 
 - Email: hi@gmail.com
