@@ -60,10 +60,10 @@
 - Socket.IO
 - JWT Auth (Secure cookies)
 
-**DevOps / Infra**
+**DevOps / Infra (still WIP)**
 - Docker (for local setup)
 - Render (deployment)
-- GitHub Actions or Jenkins (optional CI/CD)
+- Jenkins (WIP)
 - Stream API for video calling
 
 ---
