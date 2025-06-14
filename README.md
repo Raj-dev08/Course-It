@@ -15,12 +15,16 @@
 ### 📚 Courses
 - Create, join, and manage courses
 - Course group chats with real-time messaging (Socket.IO)
-- List of course admins and members
 
 ### 💬 Real-Time Chat
 - 1-on-1 private messaging
 - Course-based group chats
 - Friend requests and friend list
+
+### ✒️ Quizzes 
+- give quizes with limited time and get instant results
+- admin based quiz creation and pause or delete
+- checks all of the scores after quiz ends
 
 ### 📹 Video Calling
 - Group video calling using [Stream](https://getstream.io)
