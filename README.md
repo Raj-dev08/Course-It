@@ -70,15 +70,16 @@
 
 ## 📦 Getting Started (Local Setup)
 
-### 1. Clone the Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Raj-dev08/Course-It.git
 cd Course-It
 ```
 
-### 2. Setup env variables 
-# backend/.env
+## 2. Setup env variables 
+
+### backend/.env
 - PORT=5000
 - MONGO_URI=your_mongodb_uri
 - JWT_SECRET=your_jwt_secret
@@ -86,10 +87,13 @@ cd Course-It
 - STREAM_API_KEY=your_stream_key
 - STREAM_API_SECRET=your_stream_secret
 
-# frontend/.env
+- ARCJET_KEY= your_arcjet_key
+
+
+### frontend/.env
 - VITE_STREAM_KEY=your_stream_key
 
-### 3. Run locally 
+## 3. Run locally 
 
 ```
 cd backend
@@ -102,7 +106,7 @@ cd frontend
 npm install
 npm run dev
 ```
-### Demo
+## Demo
 - render link:
 - https://course-it-2s22.onrender.com
 
