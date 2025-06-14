@@ -83,8 +83,8 @@ cd Course-It
 - MONGO_URI=your_mongodb_uri
 - JWT_SECRET=your_jwt_secret
 - REDIS_URL=your_redis_url
--STREAM_API_KEY=your_stream_key
--STREAM_API_SECRET=your_stream_secret
+- STREAM_API_KEY=your_stream_key
+- STREAM_API_SECRET=your_stream_secret
 
 # frontend/.env
 - VITE_STREAM_KEY=your_stream_key
