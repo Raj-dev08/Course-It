@@ -79,29 +79,33 @@ cd Course-It
 
 ### 2. Setup env variables 
 # backend/.env
-PORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-REDIS_URL=your_redis_url
-STREAM_API_KEY=your_stream_key
-STREAM_API_SECRET=your_stream_secret
+- PORT=5000
+- MONGO_URI=your_mongodb_uri
+- JWT_SECRET=your_jwt_secret
+- REDIS_URL=your_redis_url
+-STREAM_API_KEY=your_stream_key
+-STREAM_API_SECRET=your_stream_secret
 
 # frontend/.env
-VITE_STREAM_KEY=your_stream_key
+-VITE_STREAM_KEY=your_stream_key
 
 ### 3. Run locally 
+
+```
 cd backend
 npm install
 npm run dev
+```
 
+```
 cd frontend
 npm install
 npm run dev
-
+```
 ### Demo
-render link
-https://course-it-2s22.onrender.com
+-render link:
+-https://course-it-2s22.onrender.com
 
 # demo credentials for accessing 
-Email: hi@gmail.com
-Password: 1234
+- Email: hi@gmail.com
+- Password: 1234
