@@ -22,9 +22,9 @@
 - Friend requests and friend list
 
 ### ✒️ Quizzes 
-- give quizes with limited time and get instant results
-- admin based quiz creation and pause or delete
-- checks all of the scores after quiz ends
+- Give quizes with limited time and get instant results
+- Admin based quiz creation and pause or delete
+- Checks all of the scores after quiz ends
 
 ### 📹 Video Calling
 - Group video calling using [Stream](https://getstream.io)
