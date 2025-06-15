@@ -60,7 +60,6 @@ pipeline {
             steps {
                 dir('backend') {
                     echo 'Starting backend server...'
-                    bat 'docker compose down'
                     bat 'docker compose up -d'
                 }
             }
