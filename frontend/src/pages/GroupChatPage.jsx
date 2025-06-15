@@ -10,9 +10,16 @@ const GroupChatPage = () => {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    if(selectedGroup?.creator._id.toString()!==authUser._id.toString()||selectedGroup?.students.some(s=>s.studentId._id.toString()!==authUser._id.toString())){
-      navigate("/"); // Redirect to home if user is not part of the group
-    }
+      if (!selectedGroup) return;
+
+      const isCreator = selectedGroup.creator._id.toString() === authUser._id.toString();
+      const isStudent = selectedGroup.students.some(
+        (s) => s.studentId._id.toString() === authUser._id.toString()
+      );
+
+      if (!isCreator && !isStudent) {
+        navigate("/");
+      }
   },[selectedGroup,authUser._id])
 
   return (
