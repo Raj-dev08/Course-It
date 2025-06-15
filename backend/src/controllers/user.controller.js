@@ -159,6 +159,8 @@ export const acceptFriendRequest = async (req, res) => {
         await redis.del(`friendRequests:${userId}`); // Invalidate cache for receiver's friend requests
         await redis.del(`friendRequests:${senderId}`); // Invalidate cache for sender's friend requests
 
+        await redis.del(`friends:${userId}`);
+        await redis.del(`friends:${senderId}`);
 
         return res.status(200).json({ message: "Friend request accepted" });
     } catch (error) {
@@ -193,6 +195,10 @@ export const rejectFriendRequest = async (req, res) => {
         await redis.del(`friendRequests:${userId}`); // Invalidate cache for receiver's friend requests
         await redis.del(`friendRequests:${senderId}`); // Invalidate cache for sender's friend requests
 
+        
+        await redis.del(`friends:${userId}`);
+        await redis.del(`friends:${senderId}`);
+        
         return res.status(200).json({ message: "Friend request rejected" });
     } catch (error) {
         console.log("Error in rejectFriendRequest controller: ", error.message);
