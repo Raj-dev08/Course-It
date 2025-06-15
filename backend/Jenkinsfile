@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        NODE_ENV = 'development'
+    }
+
     stages {
         stage('Hello') {
             steps {
@@ -10,7 +14,37 @@ pipeline {
         }
         stage('Install'){
             steps {
-                echo 'npm run dev'
+               dir('backend') {
+                    echo 'Installing dependencies for backend...'
+                    sh 'npm install'
+                }
+                dir('frontend') {
+                    echo 'Installing dependencies for frontend...'
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Run Frontend') {
+            when {
+                expression { env.NODE_ENV == 'development' }
+            }
+            steps {
+                dir('frontend') {
+                    echo 'Building frontend...'
+                     sh 'nohup npm run dev &' // Run frontend in the background
+                }
+            }
+        }
+        stage('Run Backend') {
+            when {
+                expression { env.NODE_ENV == 'development' }
+            }
+            steps {
+                dir('backend') {
+                    echo 'Starting backend server...'
+                    sh 'docker compose down'
+                    sh 'docker compose up -d'
+                }
             }
         }
     }
