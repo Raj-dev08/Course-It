@@ -9,17 +9,15 @@ const GroupChatPage = () => {
   const { authUser } = useAuthStore();
   const navigate = useNavigate();
 
-  console.log("selectedGroup", selectedGroup);
-
   useEffect(()=>{
     if(!selectedGroup){
       navigate("/"); // Redirect to home if no group is selected
     }
 
-    if(selectedGroup.creator._id!==authUser._id||selectedGroup.students.some(s=>s.studentId._id!==authUser._id)){
+    if(selectedGroup.creator._id.toString()!==authUser._id.toString()||selectedGroup.students.some(s=>s.studentId._id.toString()!==authUser._id.toString())){
       navigate("/"); // Redirect to home if user is not part of the group
     }
-  },[])
+  },[ ])
 
   return (
     <div className="h-screen bg-base-200">
