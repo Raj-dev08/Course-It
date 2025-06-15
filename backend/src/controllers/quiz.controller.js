@@ -81,7 +81,15 @@ export const getQuizFromCourse= async (req,res) => {
         if(!courseId){
             return res.status(404).json({message:"course not found"})
         }
+        const course = await Course.findById(courseId);
 
+        if (!course) {
+            return res.status(404).json({ message: 'Course not found' });
+        }
+
+        if(!course.students.some(s => s.studentId.equals(user._id))) {
+            return res.status(401).json({ message: 'Unauthorized access Not a student' });
+        }
         let quiz=await Quiz.find({courseId:courseId})
 
         if(quiz.length===0){

@@ -90,13 +90,16 @@ export const useGroupChatStore = create((set,get)=>({
     socket.on("userTyping",({from})=>{
       const typingUsers = get().typingUsers;
 
+
+
       if (!typingUsers.includes(from)) {
         set({ typingUsers: [...typingUsers, from] });
       }
     })
 
-    socket.on("stopTyping",({from})=>{
+    socket.on("userStoppedTyping",({from})=>{
       const {typingUsers}=get()
+      
 
       set({typingUsers:typingUsers.filter((user)=>user._id!==from._id)})
     })

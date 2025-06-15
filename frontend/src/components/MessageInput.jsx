@@ -85,7 +85,7 @@ const MessageInput = ({mode}) => {
       if(mode==="group"){
         socket.emit("stopTyping",{from:authUser,to:selectedGroup._id});
       }
-    }, 2000); 
+    }, 800); // 800ms delay
   }
 
   return (

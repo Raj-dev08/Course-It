@@ -1,9 +1,25 @@
 import { useGroupChatStore } from "../store/useGroupChat";
+import { useAuthStore } from "../store/useAuthStore";
 import GroupChatContainer from "../components/GroupChatContainer";
-import { Navigate } from "react-router-dom";
+import { Navigate ,useNavigate} from "react-router-dom";
+import { useEffect } from "react";
 
 const GroupChatPage = () => {
   const { selectedGroup } = useGroupChatStore();
+  const { authUser } = useAuthStore();
+  const navigate = useNavigate();
+
+  console.log("selectedGroup", selectedGroup);
+
+  useEffect(()=>{
+    if(!selectedGroup){
+      navigate("/"); // Redirect to home if no group is selected
+    }
+
+    if(selectedGroup.creator._id!==authUser._id||selectedGroup.students.some(s=>s.studentId._id!==authUser._id)){
+      navigate("/"); // Redirect to home if user is not part of the group
+    }
+  },[])
 
   return (
     <div className="h-screen bg-base-200">
