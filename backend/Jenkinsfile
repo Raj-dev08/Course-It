@@ -16,11 +16,11 @@ pipeline {
             steps {
                dir('backend') {
                     echo 'Installing dependencies for backend...'
-                    sh 'npm install'
+                    bat 'npm install'
                 }
                 dir('frontend') {
                     echo 'Installing dependencies for frontend...'
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo 'Building frontend...'
-                     sh 'nohup npm run dev &' // Run frontend in the background
+                     bat 'start /B npm run dev' // Run frontend in the background
                 }
             }
         }
@@ -42,8 +42,8 @@ pipeline {
             steps {
                 dir('backend') {
                     echo 'Starting backend server...'
-                    sh 'docker compose down'
-                    sh 'docker compose up -d'
+                    bat 'docker compose down'
+                    bat 'docker compose up -d'
                 }
             }
         }
