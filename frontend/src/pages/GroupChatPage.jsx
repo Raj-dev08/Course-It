@@ -10,14 +10,10 @@ const GroupChatPage = () => {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    if(!selectedGroup){
-      navigate("/"); // Redirect to home if no group is selected
-    }
-
-    if(selectedGroup.creator._id.toString()!==authUser._id.toString()||selectedGroup.students.some(s=>s.studentId._id.toString()!==authUser._id.toString())){
+    if(selectedGroup?.creator._id.toString()!==authUser._id.toString()||selectedGroup?.students.some(s=>s.studentId._id.toString()!==authUser._id.toString())){
       navigate("/"); // Redirect to home if user is not part of the group
     }
-  },[ ])
+  },[selectedGroup,authUser._id])
 
   return (
     <div className="h-screen bg-base-200">
