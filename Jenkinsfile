@@ -60,7 +60,7 @@ pipeline {
             steps {
                dir('backend') {
                     echo 'Building backend Docker image...'
-                    bat 'docker compose build'
+                    bat 'npm install'
                 }
                 dir('frontend') {
                     echo 'Installing frontend dependencies...'
