@@ -58,7 +58,16 @@ pipeline {
         }
         stage('Build and Install') {
             steps {
-                bat 'npm run build'
+               dir('backend') {
+                    echo 'Building backend Docker image...'
+                    bat 'docker compose build'
+                }
+                dir('frontend') {
+                    echo 'Installing frontend dependencies...'
+                    bat 'npm install'
+                    echo 'Building frontend...'
+                    bat 'npm run build'
+                }
             }
         }
         stage('Run'){
