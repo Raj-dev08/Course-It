@@ -60,7 +60,7 @@ pipeline {
             steps {
                echo 'Buildind from root'
                bat 'npm run clean'
-               bat 'npm run build'
+               bat 'set NODE_ENV=development && npm run build'
             }
         }
         stage('Run'){
