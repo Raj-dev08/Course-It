@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+     "clean": "rd /s /q frontend\\node_modules && rd /s /q backend\\node_modules && del frontend\\package-lock.json && del backend\\package-lock.json",
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm run start --prefix backend"
   },
