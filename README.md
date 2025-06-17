@@ -49,18 +49,24 @@
 ## 🛠️ Tech Stack
 
 ### 💻 Frontend
-- React
-- Tailwind CSS
-- Zustand (State Management)
-- Axios
-- Framer Motion
+
+- ⚛️ **React** – Component-based JavaScript UI library  
+- 🎨 **Tailwind CSS** – Utility-first CSS framework  
+- 🐻 **Zustand** – Lightweight state management solution  
+- 📡 **Axios** – Promise-based HTTP client  
+- 💫 **Framer Motion** – Declarative animations for React
+
+---
 
 ### 🧠 Backend
-- Node.js + Express.js
-- MongoDB + Mongoose
-- Redis
-- Socket.IO
-- JWT + Secure Cookies
+
+- 🟢 **Node.js** – JavaScript runtime built on Chrome's V8  
+- 🚂 **Express.js** – Fast and minimalist web framework  
+- 🍃 **MongoDB** – NoSQL document database  
+- 📦 **Mongoose** – Elegant MongoDB object modeling  
+- 🧠 **Redis** – In-memory key-value store for caching & rate limiting  
+- 🔌 **Socket.IO** – Real-time bidirectional communication  
+- 🔐 **JWT + Secure Cookies** – Auth with HTTP-only cookie storage
 
 ### ⚙️ DevOps / Deployment
 - 🐳 Docker (for local setup)
