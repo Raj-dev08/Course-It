@@ -4,67 +4,70 @@
 
 ---
 
-## 🚀 Features
+## ✨ Key Features
 
-### 👥 User System
-- Signup/Login with secure JWT authentication (HTTP-only cookies)
-- Persistent login with refresh tokens
-- Rate limiting and bot protection
-- Role-based access control (User/Admin)
+### 🔐 Authentication & Security
+- ✅ Secure login with JWT + HTTP-only cookies
+- 🔁 Persistent sessions via refresh tokens
+- 🚫 Rate limiting & bot protection (Arcjet)
+- 🛡️ Role-based access: User/Admin
 
 ### 📚 Courses
-- Create, join, and manage courses
-- Course group chats with real-time messaging (Socket.IO)
+- ➕ Create & join courses
+- 🛠️ Admin controls over content & members
+- 💬 Real-time group chat (Socket.IO)
 
-### 💬 Real-Time Chat
-- 1-on-1 private messaging
-- Course-based group chats
-- Friend requests and friend list
+### 💬 Chat System
+- 🗣️ 1-on-1 private messaging
+- 👥 Group chats per course
+- 👋 Friend requests & friend list
 
-### ✒️ Quizzes 
-- Give quizes with limited time and get instant results
-- Admin based quiz creation and pause or delete
-- Checks all of the scores after quiz ends
+### 📝 Quiz Module
+- ⏱️ Timed quizzes with auto-evaluation
+- 🛑 Admin: create, pause, or delete quizzes
+- 📊 Score summary after submission
 
 ### 📹 Video Calling
-- Group video calling using [Stream](https://getstream.io)
-- Peer-to-peer and scalable integration
+- 🧑‍🤝‍🧑 Group calls powered by [Stream](https://getstream.io)
+- ⚡ Peer-to-peer & scalable architecture
 
-### ⚙️ Backend Systems
-- Redis-based caching and rate limiting
-- MongoDB with schema indexing and query optimization
-- JWT auth + secure cookie handling
-- Compression, pagination, and performance tuning
-- Admin-level control on users/courses
+### ⚙️ Backend Highlights
+- ⚡ Redis for caching & rate-limiting
+- 🧠 Indexed MongoDB schemas for performance
+- 🔒 Secure auth, cookie handling, and validations
+- 📦 Compression, pagination, and speed tuning
+- 🧑‍💼 Admin access to manage users/courses
 
-### 🎨 Frontend
-- Built with React and Tailwind CSS
-- Smooth UI with Framer Motion animations
-- Lazy loading (scroll-based)
-- Fully responsive (desktop + mobile)
+### 💻 Frontend Experience
+- ⚛️ React + Tailwind CSS
+- 🎨 Smooth UI with Framer Motion
+- 🔃 Lazy loading (infinite scroll)
+- 📱 Fully responsive — Mobile & Desktop
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend**
+### 💻 Frontend
 - React
 - Tailwind CSS
-- Axios, Zustand
+- Zustand (State Management)
+- Axios
 - Framer Motion
 
-**Backend**
-- Node.js, Express.js
+### 🧠 Backend
+- Node.js + Express.js
 - MongoDB + Mongoose
 - Redis
 - Socket.IO
-- JWT Auth (Secure cookies)
+- JWT + Secure Cookies
 
-**DevOps / Infra (still WIP)**
-- Docker (for local setup)
-- Render (deployment)
-- Jenkins (WIP)
-- Stream API for video calling
+### ⚙️ DevOps / Deployment
+- 🐳 Docker (for local setup)
+- ⚙️ Jenkins (CI/CD locally)
+- 🔃 Nginx (for laod balancing)
+- 🚀 Render (Production)
+- 🎥 Stream (Video Call API)
 
 ---
 
@@ -106,9 +109,10 @@ cd frontend
 npm install
 npm run dev
 ```
-## Demo
-- render link:
-- https://course-it-2s22.onrender.com
+## 🚀 Live Demo
+
+🌍 **Check it out here:**  
+🔗 [Click to Open Course-It on Render](https://course-it-2s22.onrender.com)
 
 # demo credentials for accessing 
 - Email: hi@gmail.com
