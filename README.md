@@ -42,7 +42,7 @@
 - ⚛️ React + Tailwind CSS
 - 🎨 Smooth UI with Framer Motion
 - 🔃 Lazy loading (infinite scroll)
-- 📱 Fully responsive — Mobile & Desktop
+- 📱 Fully responsive — Tablet & Desktop
 
 ---
 
