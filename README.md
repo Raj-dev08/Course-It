@@ -48,6 +48,8 @@
 
 ## 🛠️ Tech Stack
 
+---
+
 ### 💻 Frontend
 
 - ⚛️ **React** – Component-based JavaScript UI library  
@@ -67,6 +69,8 @@
 - 🧠 **Redis** – In-memory key-value store for caching & rate limiting  
 - 🔌 **Socket.IO** – Real-time bidirectional communication  
 - 🔐 **JWT + Secure Cookies** – Auth with HTTP-only cookie storage
+
+---
 
 ### ⚙️ DevOps / Deployment
 - 🐳 Docker (for local setup)
