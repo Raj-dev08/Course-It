@@ -75,7 +75,7 @@
 ### ⚙️ DevOps / Deployment
 - 🐳 Docker (for local setup)
 - ⚙️ Jenkins (CI/CD locally)
-- 🔃 Nginx (for laod balancing)
+- 🔃 Nginx (Local load balancing )
 - 🚀 Render (Production)
 - 🎥 Stream (Video Call API)
 
